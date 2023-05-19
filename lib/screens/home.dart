@@ -39,7 +39,7 @@ class _MainNetState extends State<MainNet> {
 
   Future<void> getWeather() async {
     final String search = cityController.text;
-    final String id = '33f3e9a1ca621c56313222021b8499cb';
+    final String id = 'YOUR_API_KEY';
     var res = await http.get(Uri.parse(
         'https://api.openweathermap.org/data/2.5/weather?q=$search&appid=$id&units=metric'));
     var data = json.decode(res.body);
